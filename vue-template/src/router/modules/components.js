@@ -1,0 +1,86 @@
+/** 当你的路由表太长时，可以分成小的模块 **/
+
+import Layout from '@/layout';
+
+const componentsRouter = {
+  path: '/components',
+  component: Layout,
+  redirect: 'noRedirect',
+  name: 'ComponentDemo',
+  meta: {
+    title: '组件',
+    icon: 'component',
+  },
+  children: [{
+      path: 'tinymce',
+      component: () => import('@/views/components-demo/tinymce'),
+      name: 'TinymceDemo',
+      meta: {
+        title: '富文本编辑器'
+      }
+    }, {
+      path: 'markdown',
+      component: () => import('@/views/components-demo/markdown'),
+      name: 'MarkdownDemo',
+      meta: {
+        title: 'markdown 编辑器'
+      }
+    }, {
+      path: 'mixin',
+      component: () => import('@/views/components-demo/mixin'),
+      name: 'ComponentMixinDemo',
+      meta: {
+        title: '小组件'
+      }
+    }, {
+      path: 'avatar-upload',
+      component: () => import('@/views/components-demo/avatar-upload'),
+      name: 'AvatarUploadDemo',
+      meta: {
+        title: '文件上传'
+      }
+    },
+    {
+      path: 'back-to-top',
+      component: () => import('@/views/components-demo/back-to-top'),
+      name: 'BackToTopDemo',
+      meta: {
+        title: '返回顶部'
+      }
+    },
+    {
+      path: 'drag-dialog',
+      component: () => import('@/views/components-demo/drag-dialog'),
+      name: 'DragDialogDemo',
+      meta: {
+        title: '拖拽 Dialog',
+      },
+    },
+    {
+      path: 'drag-select',
+      component: () => import('@/views/components-demo/drag-select'),
+      name: 'DragSelectDemo',
+      meta: {
+        title: '拖拽 Select',
+      },
+    },
+    {
+      path: 'dnd-list',
+      component: () => import('@/views/components-demo/dnd-list'),
+      name: 'DndListDemo',
+      meta: {
+        title: '列表拖拽'
+      }
+    },
+    {
+      path: 'drag-kanban',
+      component: () => import('@/views/components-demo/drag-kanban'),
+      name: 'DragKanbanDemo',
+      meta: {
+        title: '可拖拽看板'
+      }
+    }
+  ],
+};
+
+export default componentsRouter;
