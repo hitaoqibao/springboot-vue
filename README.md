@@ -1,4 +1,4 @@
-##  基于springboot+vue整合的管理系统基础模板
+##  基于springboot+vue后台管理系统[（基础模板）](https://github.com/hitaoqibao/springboot-vue-template "（基础模板）")
 #### 后端技术栈
 |依赖| 版本  |
 | ------------ | ------------ |
@@ -18,4 +18,3 @@
 |  axios | 0.19.2  |
 | vue-router  | 3.3.4  |
 |vuex|3.5.1|
-
