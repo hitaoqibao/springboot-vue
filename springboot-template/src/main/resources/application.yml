@@ -73,6 +73,17 @@ spring:
         max-idle: 10
         # 连接池中的最小空闲连接
         min-idle: 0
+  #servlet配置
+  servlet:
+    multipart:
+      enabled: true               # 开启文件上传
+      file-size-threshold: 2KB    # 文件写入磁盘的阈值
+      max-file-size: 300MB        # 最大文件大小
+      max-request-size: 300MB     # 最大请求值大小
+
+# 自定义文件保存位置
+file:
+  path: 'F:\springboot-vue\upload'
 
 # mybatis-plus相关配置
 mybatis-plus:
@@ -96,3 +107,4 @@ mybatis-plus:
     call-setters-on-nulls: false
     # 这个配置会将执行的sql打印出来，在开发或测试的时候可以用
     # log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+

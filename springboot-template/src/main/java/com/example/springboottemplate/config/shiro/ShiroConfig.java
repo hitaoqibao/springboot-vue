@@ -40,10 +40,20 @@ public class ShiroConfig {
     LinkedHashMap<String, String> filterChainDefinitionMap = new LinkedHashMap<>();
     // 注意过滤器配置顺序 不能颠倒
     // 配置不会被拦截的链接 顺序判断
+    // authc:所有url都必须认证通过才可以访问; anon:所有url都都可以匿名访问
     filterChainDefinitionMap.put("/user/login", "anon");
     filterChainDefinitionMap.put("/user/checkname", "anon");
     filterChainDefinitionMap.put("/user/register", "anon");
-    // filterChainDefinitionMap.put("/user/logout", "logout");
+    filterChainDefinitionMap.put("/file/actionupload", "anon");
+    // druid接口权限 开放
+    filterChainDefinitionMap.put("/druid/**", "anon");
+    // swagger接口权限 开放
+    filterChainDefinitionMap.put("/swagger-ui.html", "anon");
+    filterChainDefinitionMap.put("/swagger/**", "anon");
+    filterChainDefinitionMap.put("/webjars/**", "anon");
+    filterChainDefinitionMap.put("/swagger-resources/**", "anon");
+    filterChainDefinitionMap.put("/v2/**", "anon");
+    // 全部拦截
     filterChainDefinitionMap.put("/**", "authc");
     shiroFilterFactoryBean.setFilterChainDefinitionMap(filterChainDefinitionMap);
 
