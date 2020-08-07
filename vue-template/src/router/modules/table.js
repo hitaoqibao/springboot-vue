@@ -27,6 +27,14 @@ const tableRouter = {
         title: '拖拽表格'
       }
     },
+    {
+      path: 'inline-edit-table',
+      component: () => import('@/views/table/inline-edit-table'),
+      name: 'InlineEditTable',
+      meta: {
+        title: '表格内编辑'
+      }
+    },
   ]
 }
 export default tableRouter

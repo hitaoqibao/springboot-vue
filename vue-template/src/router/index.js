@@ -9,6 +9,7 @@ import Layout from '@/layout'
 import componentsRouter from './modules/components'
 import nestedRouter from './modules/nested'
 import tableRouter from './modules/table'
+import excelRouter from './modules/excel'
 
 /*// 当设置 true 的时候该路由不会在侧边栏出现 如401，login等页面，或者如一些编辑页面/edit/1
 hidden: true // (默认 false)
@@ -108,6 +109,7 @@ export const constantRoutes = [{
   nestedRouter,
   componentsRouter,
   tableRouter,
+  excelRouter,
 ]
 
 /**
