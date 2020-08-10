@@ -10,6 +10,7 @@ import componentsRouter from './modules/components'
 import nestedRouter from './modules/nested'
 import tableRouter from './modules/table'
 import excelRouter from './modules/excel'
+import zipRouter from './modules/zip'
 
 /*// 当设置 true 的时候该路由不会在侧边栏出现 如401，login等页面，或者如一些编辑页面/edit/1
 hidden: true // (默认 false)
@@ -91,25 +92,12 @@ export const constantRoutes = [{
       }
     }]
   },
-  {
-    path: '/test',
-    component: Layout,
-    redirect: '/test',
-    children: [{
-      path: 'test',
-      component: () => import('@/views/test/index'),
-      name: 'test',
-      meta: {
-        title: '测试',
-        icon: 'dashboard',
-      }
-    }]
-  },
   /** 当你的路由表太长时，可以分成小的模块 **/
   nestedRouter,
   componentsRouter,
   tableRouter,
   excelRouter,
+  zipRouter,
 ]
 
 /**

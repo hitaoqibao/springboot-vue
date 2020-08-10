@@ -1,4 +1,4 @@
-/** 当你的路由表太长时，可以分成小的模块 **/
+/** table模块 **/
 
 import Layout from '@/layout'
 
@@ -35,6 +35,14 @@ const tableRouter = {
         title: '表格内编辑'
       }
     },
+    {
+      path: 'pagination',
+      component: () => import('@/views/table/paginations'),
+      name: 'Pagination',
+      meta: {
+        title: '后端分页'
+      }
+    }
   ]
 }
 export default tableRouter

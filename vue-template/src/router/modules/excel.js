@@ -1,4 +1,4 @@
-/** 当你的路由表太长时，可以分成小的模块 **/
+/** Excel模块 **/
 
 import Layout from '@/layout'
 

@@ -46,10 +46,10 @@ import Pagination from "@/components/Pagination"; //分页组件
 import waves from "@/directive/waves/index.js"; // 水波纹指令
 
 export default {
-  name: "test",
+  name: "paginations",
   components: { Pagination },
   directives: {
-    waves
+    waves,
   },
   data() {
     return {
@@ -64,8 +64,8 @@ export default {
         // 当前页
         page: 1,
         //每页多少条
-        limit: 10
-      }
+        limit: 10,
+      },
     };
   },
   created() {
@@ -76,18 +76,17 @@ export default {
     getList() {
       this.listLoading = true;
       getusertable(this.listQuery.page, this.listQuery.limit, this.value)
-        .then(response => {
+        .then((response) => {
           this.list = response.data.list;
           this.total = response.data.total;
           this.listLoading = false;
         })
-        .catch(error => {
+        .catch((error) => {
           this.listLoading = false;
           console.log(error);
         });
     },
-    add() {}
-  }
+  },
 };
 </script>
 
