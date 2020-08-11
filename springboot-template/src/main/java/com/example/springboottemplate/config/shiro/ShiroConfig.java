@@ -45,7 +45,6 @@ public class ShiroConfig {
     filterChainDefinitionMap.put("/user/checkname", "anon");
     filterChainDefinitionMap.put("/user/register", "anon");
     filterChainDefinitionMap.put("/file/actionupload", "anon");
-    filterChainDefinitionMap.put("/file/video", "anon");
     // druid接口权限 开放
     filterChainDefinitionMap.put("/druid/**", "anon");
     // swagger接口权限 开放

@@ -15,11 +15,9 @@ import com.example.springboottemplate.service.FileService;
 import com.example.springboottemplate.util.NonStaticResourceHttpRequestHandler;
 import com.example.springboottemplate.util.Result;
 
-import org.antlr.v4.runtime.misc.Pair;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.util.ClassUtils;
 import org.springframework.util.StringUtils;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -56,14 +54,15 @@ public class FileController {
     return Result.success();
   }
 
-  @GetMapping(value = "/video")
-  public void videoPreview(HttpServletRequest request, HttpServletResponse response) throws Exception {
-
+  @ApiOperation(value = "视频播放")
+  @RequestMapping(value = "/video", method = RequestMethod.GET)
+  public void videoPreview(HttpServletRequest request, HttpServletResponse response,
+      @RequestParam("filename") String filename) throws Exception {
     // 假如我把视频1.mp4放在了static下的video文件夹里面
     // sourcePath 是获取resources文件夹的绝对地址
     // realPath 即是视频所在的磁盘地址
     String sourcePath = ClassUtils.getDefaultClassLoader().getResource("").getPath().substring(1);
-    String realPath = sourcePath + "static/video/1.mp4";
+    String realPath = sourcePath + "static/video/" + filename + ".mp4";
 
     Path filePath = Paths.get(realPath);
     if (Files.exists(filePath)) {
