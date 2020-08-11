@@ -79,6 +79,14 @@ const componentsRouter = {
       meta: {
         title: '可拖拽看板'
       }
+    },
+    {
+      path: 'video',
+      component: () => import('@/views/components-demo/video'),
+      name: 'Video',
+      meta: {
+        title: '视频播放'
+      }
     }
   ],
 };
