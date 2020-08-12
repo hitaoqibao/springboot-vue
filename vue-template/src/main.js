@@ -11,7 +11,9 @@ import router from './router'
 import './icons' // 图标
 import './permission' // 权限控制
 import * as filters from './filters' // 全局过滤器
+import vRegion from 'v-region' //行政区划选择器
 
+Vue.use(vRegion)
 Vue.use(ElementUI, {
   size: Cookies.get('size') || 'default' // 设置element-ui大小
 })

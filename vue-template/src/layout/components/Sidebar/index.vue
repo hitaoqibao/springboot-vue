@@ -28,7 +28,7 @@ import { mapGetters } from "vuex";
 import Logo from "./Logo";
 import SidebarItem from "./SidebarItem";
 import variables from "@/styles/variables.scss";
-//左边目录总和
+//侧边栏
 export default {
   components: { SidebarItem, Logo },
   computed: {

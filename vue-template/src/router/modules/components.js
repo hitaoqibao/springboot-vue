@@ -95,6 +95,14 @@ const componentsRouter = {
       meta: {
         title: '音乐播放'
       }
+    },
+    {
+      path: 'region',
+      component: () => import('@/views/components-demo/region'),
+      name: 'Region',
+      meta: {
+        title: '行政区划选择器'
+      }
     }
   ],
 };
