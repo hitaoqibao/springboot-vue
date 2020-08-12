@@ -7,7 +7,7 @@
         :collapse="isCollapse"
         :background-color="variables.menuBg"
         :text-color="variables.menuText"
-        :unique-opened="false"
+        :unique-opened="true"
         :active-text-color="variables.menuActiveText"
         :collapse-transition="false"
         mode="vertical"
@@ -24,15 +24,15 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex';
-import Logo from './Logo';
-import SidebarItem from './SidebarItem';
-import variables from '@/styles/variables.scss';
+import { mapGetters } from "vuex";
+import Logo from "./Logo";
+import SidebarItem from "./SidebarItem";
+import variables from "@/styles/variables.scss";
 //左边目录总和
 export default {
   components: { SidebarItem, Logo },
   computed: {
-    ...mapGetters(['permission_routes', 'sidebar']),
+    ...mapGetters(["permission_routes", "sidebar"]),
     activeMenu() {
       const route = this.$route;
       const { meta, path } = route;

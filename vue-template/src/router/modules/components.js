@@ -87,6 +87,14 @@ const componentsRouter = {
       meta: {
         title: '视频播放'
       }
+    },
+    {
+      path: 'music',
+      component: () => import('@/views/components-demo/music'),
+      name: 'Music',
+      meta: {
+        title: '音乐播放'
+      }
     }
   ],
 };
