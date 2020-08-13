@@ -29,7 +29,9 @@
     "vue-video-player": "^5.0.2",
     "vuedraggable": "^2.24.0",
     "vuex": "^3.4.0",
-    "xlsx": "^0.16.5"
+    "xlsx": "^0.16.5",
+    "zw-player": "^1.0.6",
+    "zx-player": "^0.9.6"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "~4.4.0",
