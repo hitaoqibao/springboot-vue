@@ -1,6 +1,6 @@
 <template>
   <div class="app-container">
-    <el-card>
+    <div class="real-container">
       <el-drag-select
         v-model="value"
         style="width:500px;"
@@ -20,7 +20,7 @@
           {{ item }}
         </el-tag>
       </div>
-    </el-card>
+    </div>
   </div>
 </template>
 

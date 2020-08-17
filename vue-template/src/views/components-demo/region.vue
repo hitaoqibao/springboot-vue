@@ -1,6 +1,6 @@
 <template>
   <div class="app-container">
-    <el-card>
+    <div class="real-container">
       <aside>
         基于
         <a class="link-type" href="https://terryz.gitee.io/vue/#/region/demo"
@@ -17,7 +17,7 @@
       <div class="region">
         <span>{{ region }}</span>
       </div>
-    </el-card>
+    </div>
   </div>
 </template>
 

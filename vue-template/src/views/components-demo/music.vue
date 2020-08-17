@@ -1,6 +1,6 @@
 <template>
   <div class="app-container">
-    <el-card>
+    <div class="real-container">
       <aside>
         基于
         <a class="link-type" href="https://www.npmjs.com/package/zw-player"
@@ -9,7 +9,7 @@
         音乐播放器
       </aside>
       <player> </player>
-    </el-card>
+    </div>
   </div>
 </template>
 

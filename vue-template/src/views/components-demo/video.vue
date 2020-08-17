@@ -1,6 +1,6 @@
 <template>
   <div class="app-container">
-    <el-card>
+    <div class="real-container">
       <div :style="{ marginBottom: '20px' }">
         <el-button type="primary" @click="getName"
           >切换视频：{{ filename }}</el-button
@@ -72,8 +72,9 @@
               @player="Player2 = $event"
             ></player-hls>
           </el-card>
-        </el-col> </el-row
-    ></el-card>
+        </el-col>
+      </el-row>
+    </div>
   </div>
 </template>
 

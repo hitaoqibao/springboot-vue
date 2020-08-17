@@ -1,6 +1,6 @@
 <template>
   <div class="app-container">
-    <el-card>
+    <div class="real-container">
       <el-input
         :style="{ marginRight: '15px' }"
         v-model="filename"
@@ -45,7 +45,7 @@
           </template>
         </el-table-column>
       </el-table>
-    </el-card>
+    </div>
   </div>
 </template>
 

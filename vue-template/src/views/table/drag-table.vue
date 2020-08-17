@@ -1,6 +1,6 @@
 <template>
   <div class="app-container">
-    <el-card>
+    <div class="real-container">
       <el-table
         ref="dragTable"
         :data="list"
@@ -46,7 +46,7 @@
         {{ oldList }}
       </div>
       <div class="show-d"><el-tag>拖拽后排序 :</el-tag> {{ newList }}</div>
-    </el-card>
+    </div>
   </div>
 </template>
 

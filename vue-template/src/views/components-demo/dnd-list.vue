@@ -1,6 +1,6 @@
 <template>
   <div class="app-container">
-    <el-card>
+    <div class="real-container">
       <aside>
         基于
         <a href="https://github.com/SortableJS/Vue.Draggable" target="_blank"
@@ -15,7 +15,7 @@
           list2-title="文章池"
         />
       </div>
-    </el-card>
+    </div>
   </div>
 </template>
 

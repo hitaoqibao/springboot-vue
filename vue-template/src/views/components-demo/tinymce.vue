@@ -1,6 +1,6 @@
 <template>
   <div class="app-container">
-    <el-card>
+    <div class="real-container">
       <aside>
         基于
         <a
@@ -13,8 +13,8 @@
       <div>
         <tinymce v-model="content" :height="300" />
       </div>
-      <div class="editor-content" v-html="content"
-    /></el-card>
+      <div class="editor-content" v-html="content" />
+    </div>
   </div>
 </template>
 

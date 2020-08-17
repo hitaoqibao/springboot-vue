@@ -1,7 +1,7 @@
 <template>
   <div class="app-container">
-    <el-card
-      ><aside>
+    <div class="real-container">
+      <aside>
         Markdown基于
         <a href="https://github.com/nhnent/tui.editor" target="_blank"
           >tui.editor</a
@@ -62,8 +62,8 @@
       >
         Get HTML
       </el-button>
-      <div v-html="html"
-    /></el-card>
+      <div v-html="html" />
+    </div>
   </div>
 </template>
 

@@ -1,6 +1,6 @@
 <template>
   <div class="app-container">
-    <el-card>
+    <div class="real-container">
       <el-row>
         <el-card class="box-card">
           <div slot="header" class="clearfix">
@@ -115,8 +115,9 @@
               />
             </div>
           </el-card>
-        </el-col> </el-row
-    ></el-card>
+        </el-col>
+      </el-row>
+    </div>
   </div>
 </template>
 

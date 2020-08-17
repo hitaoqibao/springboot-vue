@@ -1,6 +1,6 @@
 <template>
   <div class="app-container">
-    <el-card>
+    <div class="real-container">
       <div>
         <FilenameOption v-model="filename" />
         <AutoWidthOption v-model="autoWidth" />
@@ -45,7 +45,7 @@
           </template>
         </el-table-column>
       </el-table>
-    </el-card>
+    </div>
   </div>
 </template>
 

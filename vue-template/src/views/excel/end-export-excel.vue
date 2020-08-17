@@ -1,6 +1,6 @@
 <template>
   <div class="app-container">
-    <el-card>
+    <div class="real-container">
       <el-button
         :loading="downloadLoading"
         style="margin:0 0 20px 20px;"
@@ -38,7 +38,7 @@
           align="center"
         ></el-table-column>
       </el-table>
-    </el-card>
+    </div>
   </div>
 </template>
 

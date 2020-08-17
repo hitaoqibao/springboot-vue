@@ -1,6 +1,6 @@
 <template>
   <div class="app-container">
-    <el-card>
+    <div class="real-container">
       <div>
         <aside>
           基于
@@ -123,7 +123,7 @@
           </span>
         </el-dialog>
       </div>
-    </el-card>
+    </div>
   </div>
 </template>
 

@@ -32,7 +32,16 @@ const componentsRouter = {
       meta: {
         title: '小组件'
       }
-    }, {
+    },
+    {
+      path: 'qrcode',
+      component: () => import('@/views/components-demo/qrcode'),
+      name: 'qrcode',
+      meta: {
+        title: '二维码'
+      }
+    },
+    {
       path: 'avatar-upload',
       component: () => import('@/views/components-demo/avatar-upload'),
       name: 'AvatarUploadDemo',

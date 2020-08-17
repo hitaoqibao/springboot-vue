@@ -1,6 +1,6 @@
 <template>
   <div class="app-container">
-    <el-card>
+    <div class="real-container">
       <upload-excel-component
         :on-success="handleSuccess"
         :before-upload="beforeUpload"
@@ -18,7 +18,7 @@
           :label="item"
         />
       </el-table>
-    </el-card>
+    </div>
   </div>
 </template>
 

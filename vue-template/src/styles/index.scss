@@ -145,6 +145,13 @@ aside {
   min-height: calc(100vh - 84px);
 }
 
+.real-container {
+  padding: 20px;
+  background-color: white;
+  min-height: calc(100vh - 114px);
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1)
+}
+
 .components-container {
   margin: 30px 50px;
   position: relative;
