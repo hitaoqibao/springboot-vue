@@ -82,8 +82,8 @@ export default {
     return {
       loading: false,
       form: {
-        username: '',
-        password: '',
+        username: 'admin',
+        password: '123456',
       },
       rules: {
         username: [
