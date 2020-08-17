@@ -16,54 +16,55 @@
         <settings />
       </right-panel>
     </div>
+    <el-backtop></el-backtop>
   </div>
 </template>
 
 <script>
-import RightPanel from "@/components/RightPanel";
-import { AppMain, Navbar, Settings, Sidebar, TagsView } from "./components";
-import ResizeMixin from "./mixin/ResizeHandler";
-import { mapState } from "vuex";
+import RightPanel from '@/components/RightPanel';
+import { AppMain, Navbar, Settings, Sidebar, TagsView } from './components';
+import ResizeMixin from './mixin/ResizeHandler';
+import { mapState } from 'vuex';
 //基础布局
 export default {
-  name: "Layout",
+  name: 'Layout',
   components: {
     AppMain,
     Navbar,
     RightPanel,
     Settings,
     Sidebar,
-    TagsView
+    TagsView,
   },
   mixins: [ResizeMixin],
   computed: {
     ...mapState({
-      sidebar: state => state.app.sidebar,
-      device: state => state.app.device,
-      showSettings: state => state.settings.showSettings,
-      needTagsView: state => state.settings.tagsView,
-      fixedHeader: state => state.settings.fixedHeader
+      sidebar: (state) => state.app.sidebar,
+      device: (state) => state.app.device,
+      showSettings: (state) => state.settings.showSettings,
+      needTagsView: (state) => state.settings.tagsView,
+      fixedHeader: (state) => state.settings.fixedHeader,
     }),
     classObj() {
       return {
         hideSidebar: !this.sidebar.opened,
         openSidebar: this.sidebar.opened,
         withoutAnimation: this.sidebar.withoutAnimation,
-        mobile: this.device === "mobile"
+        mobile: this.device === 'mobile',
       };
-    }
+    },
   },
   methods: {
     handleClickOutside() {
-      this.$store.dispatch("app/closeSideBar", { withoutAnimation: false });
-    }
-  }
+      this.$store.dispatch('app/closeSideBar', { withoutAnimation: false });
+    },
+  },
 };
 </script>
 
 <style lang="scss" scoped>
-@import "~@/styles/mixin.scss";
-@import "~@/styles/variables.scss";
+@import '~@/styles/mixin.scss';
+@import '~@/styles/variables.scss';
 
 .app-wrapper {
   @include clearfix;

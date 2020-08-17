@@ -1,50 +1,52 @@
 <template>
   <div class="app-container">
-    <el-table
-      ref="dragTable"
-      :data="list"
-      row-key="id"
-      border
-      fit
-      highlight-current-row
-      style="width: 100%"
-    >
-      <el-table-column align="center" label="序号" width="65">
-        <template slot-scope="{ row }">
-          <span>{{ row.id }}</span>
-        </template>
-      </el-table-column>
-      <el-table-column width="180px" align="center" label="时间">
-        <template slot-scope="{ row }">
-          <span>{{ row.date }}</span>
-        </template>
-      </el-table-column>
-      <el-table-column min-width="300px" label="作品">
-        <template slot-scope="{ row }">
-          <span>{{ row.title }}</span>
-        </template>
-      </el-table-column>
-      <el-table-column width="110px" align="center" label="作者">
-        <template slot-scope="{ row }">
-          <span>{{ row.author }}</span>
-        </template>
-      </el-table-column>
-      <el-table-column align="center" label="阅读数" width="95">
-        <template slot-scope="{ row }">
-          <span>{{ row.readings }}</span>
-        </template>
-      </el-table-column>
-      <el-table-column align="center" label="图标" width="80">
-        <template slot-scope="{}">
-          <svg-icon class="drag-handler" icon-class="drag" />
-        </template>
-      </el-table-column>
-    </el-table>
-    <div class="show-d">
-      <el-tag style="margin-right:12px;">默认排序 :</el-tag>
-      {{ oldList }}
-    </div>
-    <div class="show-d"><el-tag>拖拽后排序 :</el-tag> {{ newList }}</div>
+    <el-card>
+      <el-table
+        ref="dragTable"
+        :data="list"
+        row-key="id"
+        border
+        fit
+        highlight-current-row
+        style="width: 100%"
+      >
+        <el-table-column align="center" label="序号" width="65">
+          <template slot-scope="{ row }">
+            <span>{{ row.id }}</span>
+          </template>
+        </el-table-column>
+        <el-table-column width="180px" align="center" label="时间">
+          <template slot-scope="{ row }">
+            <span>{{ row.date }}</span>
+          </template>
+        </el-table-column>
+        <el-table-column min-width="300px" label="作品">
+          <template slot-scope="{ row }">
+            <span>{{ row.title }}</span>
+          </template>
+        </el-table-column>
+        <el-table-column width="110px" align="center" label="作者">
+          <template slot-scope="{ row }">
+            <span>{{ row.author }}</span>
+          </template>
+        </el-table-column>
+        <el-table-column align="center" label="阅读数" width="95">
+          <template slot-scope="{ row }">
+            <span>{{ row.readings }}</span>
+          </template>
+        </el-table-column>
+        <el-table-column align="center" label="图标" width="80">
+          <template slot-scope="{}">
+            <svg-icon class="drag-handler" icon-class="drag" />
+          </template>
+        </el-table-column>
+      </el-table>
+      <div class="show-d">
+        <el-tag style="margin-right:12px;">默认排序 :</el-tag>
+        {{ oldList }}
+      </div>
+      <div class="show-d"><el-tag>拖拽后排序 :</el-tag> {{ newList }}</div>
+    </el-card>
   </div>
 </template>
 

@@ -1,83 +1,13 @@
 <template>
-  <div class="wraper">
-    <template>
-      Scroll down to see the bottom-right button.
-      <el-backtop target=".wraper">
-        <div
-          style="{
-                        height: 100%;
-                        width: 100%;
-                        background-color: #f2f5f6;
-                        box-shadow: 0 0 6px rgba(0,0,0, .12);
-                        text-align: center;
-                        line-height: 40px;
-                        color: #1989fa;
-                    }"
-        >
-          UP
-        </div>
-      </el-backtop>
-    </template>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
-    <div>返回顶部</div>
+  <div class="app-container">
+    <el-card>
+      <aside>
+        全局返回顶部代码在：src\layout\index.vue(el-backtop标签)
+      </aside>
+      <div v-for="(item, index) in 100" :key="index" style="padding: 20px;">
+        测试滚轮显示返回顶部-{{ index }}
+      </div>
+    </el-card>
   </div>
 </template>
 
@@ -90,9 +20,4 @@ export default {
 };
 </script>
 
-<style scoped>
-.wraper {
-  height: 100vh;
-  overflow-x: hidden;
-}
-</style>
+<style scoped></style>

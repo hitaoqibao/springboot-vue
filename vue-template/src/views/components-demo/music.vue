@@ -1,16 +1,20 @@
 <template>
   <div class="app-container">
-    <aside>
-      基于
-      <a class="link-type" href="https://www.npmjs.com/package/zw-player">zw-player</a>
-      音乐播放器
-    </aside>
-    <player></player>
+    <el-card>
+      <aside>
+        基于
+        <a class="link-type" href="https://www.npmjs.com/package/zw-player"
+          >zw-player</a
+        >
+        音乐播放器
+      </aside>
+      <player> </player>
+    </el-card>
   </div>
 </template>
 
 <script>
-import Player from "zw-player";
+import Player from 'zw-player';
 export default {
   data() {
     return {};
@@ -19,5 +23,4 @@ export default {
 };
 </script>
 
-<style>
-</style>
+<style></style>

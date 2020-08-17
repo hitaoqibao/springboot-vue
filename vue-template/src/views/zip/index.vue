@@ -1,50 +1,51 @@
 <template>
   <div class="app-container">
-    <!-- $t is vue-i18n global function to translate lang -->
-    <el-input
-      :style="{ marginRight: '15px' }"
-      v-model="filename"
-      placeholder="请输入文件名（默认为file）"
-      style="width:300px;"
-      prefix-icon="el-icon-folder"
-    />
-    <el-button
-      :loading="downloadLoading"
-      style="margin-bottom:20px;"
-      type="primary"
-      icon="el-icon-download"
-      @click="handleDownload"
-      >导出Zip</el-button
-    >
-    <el-table
-      v-loading="listLoading"
-      :data="list"
-      element-loading-text="拼命加载中"
-      border
-      fit
-      highlight-current-row
-    >
-      <el-table-column align="center" label="序号" width="95">
-        <template slot-scope="scope">{{ scope.row.id }}</template>
-      </el-table-column>
-      <el-table-column label="作品">
-        <template slot-scope="scope">{{ scope.row.title }}</template>
-      </el-table-column>
-      <el-table-column label="作者" width="95" align="center">
-        <template slot-scope="scope">
-          <el-tag>{{ scope.row.author }}</el-tag>
-        </template>
-      </el-table-column>
-      <el-table-column label="阅读数" width="115" align="center">
-        <template slot-scope="scope">{{ scope.row.readings }}</template>
-      </el-table-column>
-      <el-table-column align="center" label="时间" width="220">
-        <template slot-scope="scope">
-          <i class="el-icon-time" />
-          <span>{{ scope.row.date }}</span>
-        </template>
-      </el-table-column>
-    </el-table>
+    <el-card>
+      <el-input
+        :style="{ marginRight: '15px' }"
+        v-model="filename"
+        placeholder="请输入文件名（默认为file）"
+        style="width:300px;"
+        prefix-icon="el-icon-folder"
+      />
+      <el-button
+        :loading="downloadLoading"
+        style="margin-bottom:20px;"
+        type="primary"
+        icon="el-icon-download"
+        @click="handleDownload"
+        >导出Zip</el-button
+      >
+      <el-table
+        v-loading="listLoading"
+        :data="list"
+        element-loading-text="拼命加载中"
+        border
+        fit
+        highlight-current-row
+      >
+        <el-table-column align="center" label="序号" width="95">
+          <template slot-scope="scope">{{ scope.row.id }}</template>
+        </el-table-column>
+        <el-table-column label="作品">
+          <template slot-scope="scope">{{ scope.row.title }}</template>
+        </el-table-column>
+        <el-table-column label="作者" width="95" align="center">
+          <template slot-scope="scope">
+            <el-tag>{{ scope.row.author }}</el-tag>
+          </template>
+        </el-table-column>
+        <el-table-column label="阅读数" width="115" align="center">
+          <template slot-scope="scope">{{ scope.row.readings }}</template>
+        </el-table-column>
+        <el-table-column align="center" label="时间" width="220">
+          <template slot-scope="scope">
+            <i class="el-icon-time" />
+            <span>{{ scope.row.date }}</span>
+          </template>
+        </el-table-column>
+      </el-table>
+    </el-card>
   </div>
 </template>
 

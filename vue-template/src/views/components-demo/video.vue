@@ -1,74 +1,79 @@
 <template>
   <div class="app-container">
-    <div :style="{ marginBottom: '20px' }">
-      <el-button type="primary" @click="getName"
-        >切换视频：{{ filename }}</el-button
-      >
-    </div>
-    <el-row :gutter="20">
-      <el-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12">
-        <el-card shadow="hover">
-          <div slot="header">
-            基于
-            <a
-              class="link-type"
-              href="https://www.w3school.com.cn/tags/tag_video.asp"
-              >HTML5</a
-            >
-            视频播放
-          </div>
-          <div class="video">
-            <video
-              style="{width:300px;height:300px;object-fit: fill}"
-              controls
-              autoplay
-              :src="getUrl()"
-            />
-          </div>
-        </el-card>
-      </el-col>
-      <el-rol :xs="24" :sm="24" :md="24" :lg="12" :xl="12">
-        <el-card shadow="hover">
-          <div slot="header">
-            基于
-            <a
-              class="link-type"
-              href="https://github.com/surmon-china/vue-video-player"
-              >vue-video-player</a
-            >
-            视频播放
-          </div>
-          <div class="demo">
-            <video-player
-              class="video-player vjs-custom-skin"
-              ref="videoPlayer"
-              :playsinline="true"
-              :options="playerOptions"
-            ></video-player>
-          </div>
-        </el-card>
-      </el-rol>
-    </el-row>
-    <aside :style="{ marginTop: '20px' }">
-      基于
-      <a class="link-type" href="https://www.npmjs.com/package/zx-player"
-        >zx-player</a
-      >
-      视频播放
-    </aside>
-    <el-row :gutter="20">
-      <el-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12">
-        <el-card shadow="hover">
-          <div slot="header">播放传统MP4</div>
-          <player-mp4 :config="config1" @player="Player1 = $event" />
-        </el-card>
-      </el-col>
-      <el-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12">
-        <el-card shadow="hover">
-          <div slot="header">播放m3u8，且不暴露视频地址</div>
-          <player-hls :config="config2" @player="Player2 = $event"></player-hls>
-        </el-card> </el-col
-    ></el-row>
+    <el-card>
+      <div :style="{ marginBottom: '20px' }">
+        <el-button type="primary" @click="getName"
+          >切换视频：{{ filename }}</el-button
+        >
+      </div>
+      <el-row :gutter="20">
+        <el-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12">
+          <el-card shadow="hover">
+            <div slot="header">
+              基于
+              <a
+                class="link-type"
+                href="https://www.w3school.com.cn/tags/tag_video.asp"
+                >HTML5</a
+              >
+              视频播放
+            </div>
+            <div class="video">
+              <video
+                style="{width:300px;height:300px;object-fit: fill}"
+                controls
+                autoplay
+                :src="getUrl()"
+              />
+            </div>
+          </el-card>
+        </el-col>
+        <el-rol :xs="24" :sm="24" :md="24" :lg="12" :xl="12">
+          <el-card shadow="hover">
+            <div slot="header">
+              基于
+              <a
+                class="link-type"
+                href="https://github.com/surmon-china/vue-video-player"
+                >vue-video-player</a
+              >
+              视频播放
+            </div>
+            <div class="demo">
+              <video-player
+                class="video-player vjs-custom-skin"
+                ref="videoPlayer"
+                :playsinline="true"
+                :options="playerOptions"
+              ></video-player>
+            </div>
+          </el-card>
+        </el-rol>
+      </el-row>
+      <aside :style="{ marginTop: '20px' }">
+        基于
+        <a class="link-type" href="https://www.npmjs.com/package/zx-player"
+          >zx-player</a
+        >
+        视频播放
+      </aside>
+      <el-row :gutter="20">
+        <el-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12">
+          <el-card shadow="hover">
+            <div slot="header">播放传统MP4</div>
+            <player-mp4 :config="config1" @player="Player1 = $event" />
+          </el-card>
+        </el-col>
+        <el-col :xs="24" :sm="24" :md="24" :lg="12" :xl="12">
+          <el-card shadow="hover">
+            <div slot="header">播放m3u8，且不暴露视频地址</div>
+            <player-hls
+              :config="config2"
+              @player="Player2 = $event"
+            ></player-hls>
+          </el-card>
+        </el-col> </el-row
+    ></el-card>
   </div>
 </template>
 

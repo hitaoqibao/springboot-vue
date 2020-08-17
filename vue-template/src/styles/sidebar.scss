@@ -189,7 +189,7 @@
     }
   }
 
-  // the scroll bar appears when the subMenu is too long
+  // 当菜单栏过长时，出现滚动条
   >.el-menu--popup {
     max-height: 100vh;
     overflow-y: auto;

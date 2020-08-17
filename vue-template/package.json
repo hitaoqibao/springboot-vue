@@ -25,6 +25,7 @@
     "v-region": "^2.2.2",
     "vue": "^2.6.11",
     "vue-image-crop-upload": "^2.5.0",
+    "vue-qart": "^2.2.0",
     "vue-router": "^3.2.0",
     "vue-video-player": "^5.0.2",
     "vuedraggable": "^2.24.0",

@@ -11,15 +11,15 @@
 <script>
 //可写区域
 export default {
-  name: "AppMain",
+  name: 'AppMain',
   computed: {
     cachedViews() {
       return this.$store.state.tagsView.cachedViews;
     },
     key() {
       return this.$route.path;
-    }
-  }
+    },
+  },
 };
 </script>
 

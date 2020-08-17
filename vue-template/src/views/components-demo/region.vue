@@ -1,21 +1,23 @@
 <template>
   <div class="app-container">
-    <aside>
-      基于
-      <a class="link-type" href="https://terryz.gitee.io/vue/#/region/demo"
-        >v-region</a
-      >
-      行政区划选择器
-    </aside>
-    <v-region
-      @values="regionChange"
-      type="group"
-      :town="true"
-      blank="false"
-    ></v-region>
-    <div class="region">
-      <span>{{ region }}</span>
-    </div>
+    <el-card>
+      <aside>
+        基于
+        <a class="link-type" href="https://terryz.gitee.io/vue/#/region/demo"
+          >v-region</a
+        >
+        行政区划选择器
+      </aside>
+      <v-region
+        @values="regionChange"
+        type="group"
+        :town="true"
+        blank="false"
+      ></v-region>
+      <div class="region">
+        <span>{{ region }}</span>
+      </div>
+    </el-card>
   </div>
 </template>
 
