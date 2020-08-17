@@ -1,13 +1,13 @@
 <template>
   <div class="app-container">
     <div class="real-container">
-      <aside>
+      <el-divider content-position="left">
         基于
         <a class="link-type" href="https://www.npmjs.com/package/zw-player"
           >zw-player</a
         >
         音乐播放器
-      </aside>
+      </el-divider>
       <player> </player>
     </div>
   </div>

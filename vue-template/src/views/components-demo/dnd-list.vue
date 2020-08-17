@@ -1,12 +1,12 @@
 <template>
   <div class="app-container">
     <div class="real-container">
-      <aside>
+      <el-divider content-position="left">
         基于
-        <a href="https://github.com/SortableJS/Vue.Draggable" target="_blank"
-          >Vue.Draggable</a
-        >
-      </aside>
+        <a class="link-type" href="https://github.com/SortableJS/Vue.Draggable"
+          >Vue.Draggable
+        </a>
+      </el-divider>
       <div class="editor-container">
         <dnd-list
           :list1="list1"

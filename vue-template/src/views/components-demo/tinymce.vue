@@ -1,15 +1,15 @@
 <template>
   <div class="app-container">
     <div class="real-container">
-      <aside>
+      <el-divider content-position="left">
         基于
         <a
           class="link-type"
           href="https://cdn.jsdelivr.net/npm/tinymce-all-in-one@latest/"
-          >tinymce</a
+          >tinymce富文本编辑器</a
         >
-        富文本编辑器，采用CDN引入方式
-      </aside>
+        ，采用CDN引入方式
+      </el-divider>
       <div>
         <tinymce v-model="content" :height="300" />
       </div>

@@ -1,13 +1,13 @@
 <template>
   <div class="app-container">
     <div class="real-container">
-      <aside>
+      <el-divider content-position="left">
         基于
         <a class="link-type" href="https://terryz.gitee.io/vue/#/region/demo"
           >v-region</a
         >
         行政区划选择器
-      </aside>
+      </el-divider>
       <v-region
         @values="regionChange"
         type="group"

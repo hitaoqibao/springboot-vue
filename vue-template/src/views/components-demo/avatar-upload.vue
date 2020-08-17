@@ -7,8 +7,8 @@
           <a
             class="link-type"
             href="//github.com/dai-siki/vue-image-crop-upload"
-            >vue-image-crop-upload</a
-          >
+            >vue-image-crop-upload
+          </a>
           图片上传
         </aside>
         <my-upload

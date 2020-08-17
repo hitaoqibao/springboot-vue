@@ -50,7 +50,7 @@
           </el-card>
         </el-rol>
       </el-row>
-      <aside :style="{ marginTop: '20px' }">
+      <aside content-position="left" :style="{ marginTop: '20px' }">
         基于
         <a class="link-type" href="https://www.npmjs.com/package/zx-player"
           >zx-player</a

@@ -1,13 +1,13 @@
 <template>
   <div class="app-container">
     <div class="real-container">
-      <aside>
+      <el-divider content-position="left">
         基于
         <a class="link-type" href="https://www.npmjs.com/package/vue-qart"
           >vue-qart</a
         >
         二维码生成
-      </aside>
+      </el-divider>
       <el-row>
         <el-col :xs="24" :sm="24" :md="8" :lg="8" :xl="8">
           <el-card shadow="hover">
